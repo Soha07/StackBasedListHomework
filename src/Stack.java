@@ -14,7 +14,7 @@ public interface Stack<T>
 
    //  Returns a reference to the top element of this stack
    //  without removing it.
-   public T peek();
+   public T peek() throws Exception;
 
    //  Returns true if the stack contains no elements and false
    //  otherwise.

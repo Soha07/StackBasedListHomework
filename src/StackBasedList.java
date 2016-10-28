@@ -17,8 +17,13 @@ public abstract class StackBasedList<T> implements Stack<T> {
 	}
 
 	@Override
-	public T peek() {
-		return this.array[pointer - 1];
+	public T peek() throws Exception {
+		if (pointer > 0) {
+			return this.array[pointer - 1];
+		}
+		else {
+			throw new Exception("cannot peek on empty stack!");
+		}
 	}
 
 	@Override
